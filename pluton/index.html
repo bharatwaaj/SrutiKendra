@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset=utf-8>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sruti Kendra</title>
+    <!-- Load Roboto font -->
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,700&amp;subset=latin,latin-ext' rel='stylesheet'
+          type='text/css'>
+    <!-- Load css styles -->
+    <link rel="stylesheet" type="text/css"
+          href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css"/>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap-responsive.css"/>
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <link rel="stylesheet" type="text/css" href="css/pluton.css"/>
+    <!--[if IE 7]>
+    <link rel="stylesheet" type="text/css" href="css/pluton-ie7.css"/>
+    <![endif]-->
+    <link rel="stylesheet" type="text/css" href="css/jquery.cslider.css"/>
+    <link rel="stylesheet" type="text/css" href="css/jquery.bxslider.css"/>
+    <link rel="stylesheet" type="text/css" href="css/animate.css"/>
+    <!-- Fav and touch icons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/ico/apple-touch-icon-144.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/ico/apple-touch-icon-114.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/apple-touch-icon-72.png">
+    <link rel="apple-touch-icon-precomposed" href="images/ico/apple-touch-icon-57.png">
+    <link rel="shortcut icon" href="images/ico/favicon.ico">
+    <script>
+        function showResult(str) {
+            if (str.length==0) {
+                document.getElementById("livesearch").innerHTML="";
+                document.getElementById("livesearch").style.border="0px";
+                return;
+            }
+            if (window.XMLHttpRequest) {
+                // code for IE7+, Firefox, Chrome, Opera, Safari
+                xmlhttp=new XMLHttpRequest();
+            } else {  // code for IE6, IE5
+                xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+            }
+            xmlhttp.onreadystatechange=function() {
+                if (xmlhttp.readyState==4 && xmlhttp.status==200) {
+                    document.getElementById("livesearch").innerHTML=xmlhttp.responseText;
+                    document.getElementById("livesearch").style.border="1px solid #A5ACB2";
+                }
+            }
+            xmlhttp.open("GET","php/livesearch.php?q="+str,true);
+            xmlhttp.send();
+        }
+    </script>
+</head>
+
+<body>
+<div class="row-fluid centered" id="social-right-align">
+    <ul class="social">
+        <li>
+            <a href="">
+                <i class="fa fa-facebook-square" aria-hidden="true"></i>
+            </a>
+        </li>
+        <li>
+            <a href="">
+                <i class="fa fa-youtube" aria-hidden="true"></i>
+            </a>
+        </li>
+        <li>
+            <a href="">
+                <i class="fa fa-whatsapp" aria-hidden="true"></i>
+            </a>
+        </li>
+    </ul>
+</div>
+<div class="logo">
+    <a href="#">
+        <img src="images/logo.png" alt="Sruti Kendra"/>
+    </a>
+    <!-- This is website logo -->
+</div>
+<div class="navbar">
+    <div class="navbar-inner">
+        <div class="container">
+
+            <!-- Navigation button, visible on small resolution -->
+            <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                <i class="fa fa-bars" aria-hidden="true"></i>
+            </button>
+            <!-- Main navigation -->
+            <div class="nav-collapse collapse">
+                <ul class="nav pull-right" id="top-navigation">
+                    <li class="active"><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#swamiji">Swami Ji</a></li>
+                    <li><a href="#events">Events</a></li>
+                    <li><a href="#archives">Archives</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <form class="navbar-form navbar-left navbar-search" role="search">
+                <div class="form-group navbar-search">
+                    <input type="text" class="form-control navbar-search" placeholder="Search" onkeyup="showResult(this.value)">
+                    <button type="submit" class="btn navbar-search"><span class="fa fa-search"></span></button>
+                    <div id="livesearch"></div>
+                </div>
+            </form>
+            <!-- End main navigation -->
+        </div>
+    </div>
+</div>
+<!-- Start home section -->
+<div id="home">
+    <!-- Start cSlider -->
+    <div id="da-slider" class="da-slider">
+        <div class="triangle"></div>
+        <!-- mask elemet use for masking background image -->
+        <div class="mask"></div>
+        <!-- All slides centred in container element -->
+        <div class="container">
+            <!-- Start first slide -->
+            <div class="da-slide">
+                <div class="da-image">
+                    <img src="images/Slider01.jpg" width="100%" height="100%" alt="image01">
+                </div>
+            </div>
+            <!-- End first slide -->
+            <!-- Start second slide -->
+            <div class="da-slide">
+                <img src="images/Slider02.jpg" width="100%" height="100%" alt="image02">
+            </div>
+            <!-- End second slide -->
+            <!-- Start third slide -->
+            <div class="da-slide">
+                <img src="images/Slider03.jpg" width="100%" height="100%" alt="image03">
+            </div>
+            <!-- Start third slide -->
+            <!-- Start cSlide navigation arrows -->
+            <div class="da-arrows">
+                <span class="da-arrows-prev"></span>
+                <span class="da-arrows-next"></span>
+            </div>
+            <!-- End cSlide navigation arrows -->
+        </div>
+    </div>
+</div>
+<!-- End home section -->
+<!-- Service section start -->
+<div class="section primary-section" id="about">
+    <div class="container">
+        <!-- Start title section -->
+        <div class="title">
+            <h1>What We Do at Sruti Kendra?</h1>
+            <!-- Section's title goes here -->
+            <p>Sruti Kendra is a non-profit spiritual service organisation founded by Svami Moksha Vidyaananda Sarasvati
+                in 2011,head quartered in Chennai.Sruti Kendra’s objective is transform society and help people lead
+                empowered lives through the value system and knowledge embedded in ancient Indian wisdom symbolised by
+                our Vedas and Scriptures.This transformation in our Society will help us to lead peaceful, happy and
+                fulfilling lives in harmony with family, fellow beings and Nature. Another objective is to develop pride
+                in India’s great tradition and help Nation building. All activities of Sruti Kendra are carried out in a
+                socially inclusive manner.</p>
+            <br/>
+            <!--Simple description for section goes here. -->
+        </div>
+        <div class="row-fluid">
+            <div class="span3">
+                <div class="centered service">
+                    <div class="circle-border zoom-in">
+                        <img class="img-circle" src="images/Service1.png" alt="service 1">
+                    </div>
+                    <h3>Sruti Balakendra</h3>
+
+                    <p>For children upto 12 years</p>
+                </div>
+            </div>
+            <div class="span3">
+                <div class="centered service">
+                    <div class="circle-border zoom-in">
+                        <img class="img-circle" src="images/Service1.png" alt="service 2"/>
+                    </div>
+                    <h3>Sruti Yuvakendra</h3>
+
+                    <p>For youth upto 20 years</p>
+                </div>
+            </div>
+            <div class="span3">
+                <div class="centered service">
+                    <div class="circle-border zoom-in">
+                        <img class="img-circle" src="images/Service1.png" alt="service 3">
+                    </div>
+                    <h3>Sruti Sreekendra</h3>
+
+                    <p>For developing and empowering women</p>
+                </div>
+            </div>
+            <div class="span3">
+                <div class="centered service">
+                    <div class="circle-border zoom-in">
+                        <img class="img-circle" src="images/Service1.png" alt="service 1">
+                    </div>
+                    <h3>Sruti Shikshakendra</h3>
+
+                    <p>For elders</p>
+                </div>
+            </div>
+            <div class="span3">
+                <div class="centered service">
+                    <div class="circle-border zoom-in">
+                        <img class="img-circle" src="images/Service1.png" alt="service 1">
+                    </div>
+                    <h3>Sruti Sevakendra</h3>
+
+                    <p>For service to less privileged in Society</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Service section end -->
+<!-- Portfolio section start -->
+<div class="section secondary-section " id="swamiji">
+    <div class="triangle"></div>
+    <div class="container">
+        <div class=" title">
+            <h1>Swami Ji - Our Shining Beacon</h1>
+
+            <div class="swamiji-image">
+                <img src="images/swamiji.jpg">
+            </div>
+            <p>"The ultimate aim of spirituality is to make a man realise that he is the indesctructible self, beyond
+                the sea of changes", advocates Svami Moksha Vidhyaananda Sarasvati, who takes pride in the Indian
+                culture and her rich resource of knowledge, the Sruti or the vedas.
+                It was in 1992 that Swamiji fully immersed himself into the pursuit of spirituality. In December 2011,
+                Swamiji formed Sruti Kendra with the main objective of reaching out to all sections of society and to
+                spread the sacred spiritual knowledge, with special focus on children and the youth, spreading the glory
+                of our rich culture. He inspires the householders also to walk the path of dynamic karma yoga to
+                identify and reach the highest goals of life.
+                An eloquent orator in Tamil, deep rooted in the Vedas, an erudite scholar, and ardent cricket fan, an
+                inspiring and encouraging teacher, a humble disciple, an appreciator of the arts, a committed worker and
+                overall, a good and simple human being, Svami Moksha Vidhyaananda Sarasvati is the quintessential modern
+                day Swamiji and is perhaps the most interesting person one can meet. </p>
+        </div>
+    </div>
+</div>
+<!-- Newsletter section start -->
+<div class="section third-section">
+    <div class="container newsletter">
+        <div class="sub-section">
+            <div class="title clearfix">
+                <div class="pull-left">
+                    <h3>Swami ji's Quotes</h3>
+                </div>
+            </div>
+        </div>
+        <div id="success-subscribe" class="alert alert-success invisible">
+            <strong>Well done!</strong>You successfully subscribet to our newsletter.
+        </div>
+        <div class="row-fluid">
+            <div class="span5">
+                <p>Subscribe to receive swami ji's quotes!</p>
+            </div>
+            <div class="span7">
+                <form class="inline-form">
+                    <input type="email" name="email" id="nlmail" class="span8" placeholder="Enter your email" required/>
+                    <button id="subscribe" class="button button-sp">Subscribe</button>
+                </form>
+                <div id="err-subscribe" class="error centered">Please provide valid email address.</div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Newsletter section end -->
+<!-- Portfolio section end -->
+<!-- About us section start -->
+<div class="section primary-section" id="events">
+    <div class="triangle"></div>
+    <div class="container">
+        <div class="title">
+            <h1>Events</h1>
+
+            <p>A roll of events.</p>
+        </div>
+        <div class="row-fluid team">
+            <div class="span4" id="first-person">
+                <div class="thumbnail">
+                    <img src="images/event1.jpg" alt="team 1">
+
+                    <h3>Panchasuktam</h3>
+                    <ul class="social">
+                        <li>
+                            <a href="">
+                                <span class="icon-facebook-circled"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <span class="icon-email"></span>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="mask">
+                        <h2>Upcoming Event</h2>
+
+                        <p>Date: 5th May - 15th May<br/>
+                            Timing: 7AM - 8AM (slot 1)<br/>
+                            6:30PM - 7:30 PM (slot 2)<br/>
+                            Venue: Sunshine school, Valasaravakkam</p>
+                        <br/>
+
+                        <p>Opportunity to learn Vedic chanting!Panchsuktam is being taught by Swamiji from 5th may to
+                            15th may at sunshine school. All those who wish to learn are invited.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="span4" id="second-person">
+                <div class="thumbnail">
+                    <img src="images/event2.jpg" alt="team 1">
+
+                    <h3>1st Smart Camp</h3>
+                    <ul class="social">
+                        <li>
+                            <a href="">
+                                <span class="icon-facebook-circled"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <span class="icon-email"></span>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="mask">
+                        <h2>Recent Event</h2>
+
+                        <p> Date: 27th and 28th February, 2016<br>
+                            Time: 9 a.m. - 4 p.m.<br>
+                            Venue: Hanu Reddy Realty, Seemathaman Koil Street, Madravoyal, Chennai – 600095
+                        </p><br>
+
+                        <p>Sruti Kendra organised a Smart Camp in February on the themes 'Dasa Hanuman' and 'Dheera
+                            Hanuman' for children under the spiritual guidance of Swami Moksha Vidyaananda Sarasvati.
+                            Children enjoyed themselves learning values in a fun way through games, stories and
+                            songs.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="span4" id="third-person">
+                <div class="thumbnail">
+                    <img src="images/event3.jpg" alt="team 1">
+
+                    <h3>Flood relief camp</h3>
+                    <ul class="social">
+                        <li>
+                            <a href="">
+                                <span class="icon-facebook-circled"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <span class="icon-email"></span>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="mask">
+                        <h2>Recent Event</h2>
+
+                        <p> Date: December, 2015<br>
+                            Venue: Chennai
+                        </p><br>
+
+                        <p>Sruti Kendra had extended a helping hand at times of flood in Chennai providing various
+                            relief materials. It is one among the organization that stepped up and provided the required
+                            relief materials to the needy.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <h3>Sevaks</h3>
+
+        <div class="row-fluid">
+            <div class="span6">
+                <ul class="skills">
+                    <li>
+                        <span class="bar" data-width="80%"></span>
+
+                        <h3>Sruti Balakendra</h3>
+                    </li>
+                    <li>
+                        <span class="bar" data-width="95%"></span>
+
+                        <h3>Sruti Yuvakendra</h3>
+                    </li>
+                    <li>
+                        <span class="bar" data-width="98%"></span>
+
+                        <h3>Sruti Sreekendra</h3>
+                    </li>
+                    <li>
+                        <span class="bar" data-width="90%"></span>
+
+                        <h3>Sruti Shikshakendra</h3>
+                    </li>
+                    <li>
+                        <span class="bar" data-width="70%"></span>
+
+                        <h3>Sruti Sevakendra</h3>
+                    </li>
+                </ul>
+            </div>
+            <div class="span6">
+                <div class="highlighted-box center">
+                    <h1>Sevaks Numbers</h1>
+
+                    <p>These are the percentile of sevaks we have got in different kendras.</p>
+                    <button class="button button-sp">Join Us</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Client section start -->
+<div id="archives">
+    <div class="section primary-section">
+        <div class="triangle"></div>
+        <div class="container">
+            <div class="title">
+                <h1>Archives</h1>
+
+                <p>The following are the list of archives.</p>
+            </div>
+            <div class="row-fluid team" id="archives-row">
+                <div class="span3">
+                    <div class="thumbnail">
+                        <img src="images/event1.jpg" alt="team 1">
+
+                        <h3>Albums</h3>
+                        <ul class="social">
+                            <li>
+                                <a href="">
+                                    <span class="icon-facebook-circled"></span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <span class="icon-email"></span>
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="mask">
+                            <h2>Albums</h2>
+
+                            <p>List of events pics!</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="span3">
+                    <div class="thumbnail">
+                        <img src="images/event1.jpg" alt="team 1">
+
+                        <h3>Documents</h3>
+                        <ul class="social">
+                            <li>
+                                <a href="">
+                                    <span class="icon-facebook-circled"></span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <span class="icon-email"></span>
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="mask">
+                            <h2>Documents</h2>
+
+                            <p>List of documents!</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="span3">
+                    <div class="thumbnail">
+                        <img src="images/event2.jpg" alt="team 1">
+
+                        <h3>Videos</h3>
+                        <ul class="social">
+                            <li>
+                                <a href="">
+                                    <span class="icon-facebook-circled"></span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <span class="icon-email"></span>
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="mask">
+                            <h2>Videos</h2>
+
+                            <p>List of videos!</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="span3">
+                    <div class="thumbnail">
+                        <img src="images/event3.jpg" alt="team 1">
+
+                        <h3>Books</h3>
+                        <ul class="social">
+                            <li>
+                                <a href="">
+                                    <span class="icon-facebook-circled"></span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <span class="icon-email"></span>
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="mask">
+                            <h2>Books</h2>
+
+                            <p>List of books</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <p class="testimonial-text">
+                "The ultimate aim of spirituality is to make a man realise that he is the indesctructible self, beyond
+                the sea of changes"
+            </p>
+        </div>
+    </div>
+</div>
+<!-- Contact section start -->
+<div id="contact" class="contact">
+    <div class="section secondary-section">
+        <div class="container">
+            <div class="title">
+                <h1>Contact Us</h1>
+
+                <p>Sruti Kendra has a wide reach all over India!</p>
+            </div>
+        </div>
+        <div class="map-wrapper">
+            <div class="map-canvas" id="map-canvas">Loading map...</div>
+            <div class="container">
+                <div class="row-fluid">
+                    <div class="span5 contact-form centered">
+                        <h3>Say Hello</h3>
+
+                        <div id="successSend" class="alert alert-success invisible">
+                            <strong>Well done!</strong>Your message has been sent.
+                        </div>
+                        <div id="errorSend" class="alert alert-error invisible">There was an error.</div>
+                        <form id="contact-form" action="php/mail.php">
+                            <div class="control-group">
+                                <div class="controls">
+                                    <input class="span12" type="text" id="name" name="name"
+                                           placeholder="* Your name..."/>
+
+                                    <div class="error left-align" id="err-name">Please enter name.</div>
+                                </div>
+                            </div>
+                            <div class="control-group">
+                                <div class="controls">
+                                    <input class="span12" type="email" name="email" id="email"
+                                           placeholder="* Your email..."/>
+
+                                    <div class="error left-align" id="err-email">Please enter valid email adress.</div>
+                                </div>
+                            </div>
+                            <div class="control-group">
+                                <div class="controls">
+                                    <textarea class="span12" name="comment" id="comment"
+                                              placeholder="* Comments..."></textarea>
+
+                                    <div class="error left-align" id="err-comment">Please enter your comment.</div>
+                                </div>
+                            </div>
+                            <div class="control-group">
+                                <div class="controls">
+                                    <button id="send-mail" class="message-btn">Send message</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="span9 center contact-info">
+                <p>Chennai</p>
+
+                <p class="info-mail">contact@srutikendra.com</p>
+
+                <p>+91 234 567 890</p>
+
+                <p>+91 286 543 850</p>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Contact section edn -->
+<!-- Footer section start -->
+<div class="footer">
+    <p>&copy; 2016 <a href="http://www.srutikendra.com"> Sruti Kendra </a></p>
+</div>
+<!-- Footer section end -->
+<!-- ScrollUp button start -->
+<div class="scrollup">
+    <a href="#">
+        <i class="icon-up-open"></i>
+    </a>
+</div>
+<!-- ScrollUp button end -->
+<!-- Include javascript -->
+<script src="js/jquery.js"></script>
+<script type="text/javascript" src="js/jquery.mixitup.js"></script>
+<script type="text/javascript" src="js/bootstrap.js"></script>
+<script type="text/javascript" src="js/modernizr.custom.js"></script>
+<script type="text/javascript" src="js/jquery.bxslider.js"></script>
+<script type="text/javascript" src="js/jquery.cslider.js"></script>
+<script type="text/javascript" src="js/jquery.placeholder.js"></script>
+<script type="text/javascript" src="js/jquery.inview.js"></script>
+<!-- Load google maps api and call initializeMap function defined in app.js -->
+<script async="" defer="" type="text/javascript"
+        src="https://maps.googleapis.com/maps/api/js?sensor=false&callback=initializeMap"></script>
+<!-- css3-mediaqueries.js for IE8 or older -->
+<!--[if lt IE 9]>
+<script src="js/respond.min.js"></script>
+<![endif]-->
+<script type="text/javascript" src="js/app.js"></script>
+</body>
+</html>
