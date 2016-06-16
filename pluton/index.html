@@ -72,20 +72,21 @@
             </a>
         </li>
         <li>
-            <a href="#popup1">
+            <a data-toggle="modal" data-target="#myModal">
                 <i class="fa fa-whatsapp" aria-hidden="true"></i>
             </a>
         </li>
     </ul>
-    <div id="popup1" class="overlay">
-        <div class="popup">
-            <h2>Get in touch with us!</h2>
-            <hr>
-            <a class="close" href="">&times;</a>
-            <div class="content">
-                <p>
-                Mr. Balaji - 9999999999<br/>
-                </p>
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog mymodal-theme" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h2 class="modal-title" id="myModalLabel">Get in touch!</h2>
+                </div>
+                <div class="modal-body">
+                    <h3> Mr. Balaji - 9999999999 </h3>
+                </div>
             </div>
         </div>
     </div>
