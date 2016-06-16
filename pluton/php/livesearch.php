@@ -1,7 +1,7 @@
 <?php
 $xmlDoc=new DOMDocument();
 $xmlDoc->load("links.xml");
-$x=$xmlDoc->getElementsByTagName('link');
+$x=$xmlDoc->getElementsByTagName('book');
 
 //get the q parameter from URL
 $q=$_GET["q"];
