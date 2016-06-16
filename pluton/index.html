@@ -15,6 +15,7 @@
     <link rel="stylesheet" type="text/css" href="css/bootstrap-responsive.css"/>
     <link rel="stylesheet" type="text/css" href="css/style.css"/>
     <link rel="stylesheet" type="text/css" href="css/pluton.css"/>
+    <link rel="stylesheet" type="text/css" href="css/popup.css"/>
     <!--[if IE 7]>
     <link rel="stylesheet" type="text/css" href="css/pluton-ie7.css"/>
     <![endif]-->
@@ -43,7 +44,12 @@
             xmlhttp.onreadystatechange=function() {
                 if (xmlhttp.readyState==4 && xmlhttp.status==200) {
                     document.getElementById("livesearch").innerHTML=xmlhttp.responseText;
-                    document.getElementById("livesearch").style.border="1px solid #A5ACB2";
+                    document.getElementById("livesearch").style.border="1px solid #FFEB3B";
+                    document.getElementById("livesearch").style.textAlign="center";
+                    document.getElementById("livesearch").style.padding="10px";
+                    document.getElementById("livesearch").style.color="#FFFFFF";
+                    document.getElementById("livesearch").style.background="#E64A19";
+                    document.getElementById("livesearch").style.margin="-10px";
                 }
             }
             xmlhttp.open("GET","php/livesearch.php?q="+str,true);
@@ -61,14 +67,24 @@
             </a>
         </li>
         <li>
-            <a href="">
+            <a href="http://www.youtube.com">
                 <i class="fa fa-youtube" aria-hidden="true"></i>
             </a>
         </li>
         <li>
-            <a href="">
+            <a href="#popup1">
                 <i class="fa fa-whatsapp" aria-hidden="true"></i>
             </a>
+            <div id="popup1" class="overlay">
+                <div class="popup">
+                    <h2>Get in touch with us!</h2>
+                    <a class="close" href="#">&times;</a>
+                    <div class="content">
+                        Mr. Balaji <br>
+                        9999999999
+                    </div>
+                </div>
+            </div>
         </li>
     </ul>
 </div>
