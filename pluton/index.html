@@ -81,7 +81,6 @@
         <div class="modal-dialog mymodal-theme" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                     <h2 class="modal-title" id="myModalLabel">Get in touch!</h2>
                 </div>
                 <div class="modal-body">
@@ -114,6 +113,8 @@
                     <li><a href="#events">Events</a></li>
                     <li><a href="#archives">Archives</a></li>
                     <li><a href="#contact">Contact</a></li>
+                    <li><a data-toggle="modal" data-target="#loginModal">Login</a></li>
+                    <li><a >Sign Up</a></li>
                 </ul>
             </div>
             <form class="navbar-form navbar-left navbar-search" role="search">
@@ -124,6 +125,46 @@
                 </div>
             </form>
             <!-- End main navigation -->
+        </div>
+    </div>
+</div>
+<!-- Start Login Modal-->
+
+<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="Login" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h5 class="modal-title">Login</h5>
+            </div>
+
+            <div class="modal-body">
+                <!-- The form is placed inside the body of modal -->
+                <form id="loginForm" method="post" class="form-horizontal">
+                    <div class="form-group">
+                        <label class="col-xs-3 control-label myLoginModalText">Username</label>
+                        <div class="col-xs-5">
+                            <input type="text" class="form-control myLoginModalInput" name="username" />
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="col-xs-3 control-label myLoginModalText">Password</label>
+                        <div class="col-xs-5">
+                            <input type="password" class="form-control myLoginModalInput" name="password" />
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-xs-5 col-xs-offset-3 login-sign-footer" style="float: right;">
+                            <button type="submit" class="btn btn-srk">Login</button>
+                            <button type="button" class="btn btn-srk-cancel" data-dismiss="modal" >Cancel</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
         </div>
     </div>
 </div>
@@ -605,6 +646,7 @@
                 <p>+91 234 567 890</p>
 
                 <p>+91 286 543 850</p>
+                </div>
             </div>
         </div>
     </div>
@@ -631,6 +673,7 @@
 <script type="text/javascript" src="js/jquery.cslider.js"></script>
 <script type="text/javascript" src="js/jquery.placeholder.js"></script>
 <script type="text/javascript" src="js/jquery.inview.js"></script>
+<script type="text/javascript" src="js/popup.js"></script>
 <!-- Load google maps api and call initializeMap function defined in app.js -->
 <!-- css3-mediaqueries.js for IE8 or older -->
 <!--[if lt IE 9]>

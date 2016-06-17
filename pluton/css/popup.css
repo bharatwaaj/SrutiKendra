@@ -4,11 +4,68 @@
 }
 
 #myModal {
-    background-color: #FF5722;
+    background-color: #E64A19;
 }
+
+#myLoginModalLabel {
+    color: #FFEB3B;
+    text-align: center;
+}
+
+#myLoginModal {
+    background-color: #E64A19;
+}
+
 
 .modal-body > h3{
     color: #FFEB3B;
     font-size: medium;
     text-align: center;
+}
+
+/* Login Modal CSS Contents */
+
+#loginModal {
+    background: #E64A19;
+    color: #FFEB3B;
+}
+
+.myLoginModalText {
+    margin-right: 10px;
+    margin-top: 10px;
+}
+
+.myLoginModalInput {
+    margin-top: 10px;
+    border: none;
+    box-shadow: none;
+}
+
+.btn-srk {
+    background: #FFEB3B;
+    color: #E64A19;
+    border: none;
+    text-decoration: none;
+}
+
+.btn-srk:hover {
+    background: #FFEB3B;
+    color: #E64A19;
+}
+
+.btn-srk-cancel{
+    background: #FFEB3B;
+    color: #E64A19;
+    border: none;
+}
+
+.btn-srk-cancel:hover{
+    background: #FFEB3B;
+    color: #E64A19;
+    border: none;
+}
+
+.login-sign-footer {
+    margin-top: 20px;
+    margin-right: 10px;
 }
