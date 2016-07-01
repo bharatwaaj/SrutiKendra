@@ -113,8 +113,6 @@
                     <li><a href="#events">Events</a></li>
                     <li><a href="#archives">Archives</a></li>
                     <li><a href="#contact">Contact</a></li>
-                    <li><a data-toggle="modal" data-target="#loginModal">Login</a></li>
-                    <li><a data-toggle="modal" data-target="#signUpModal">Sign Up</a></li>
                 </ul>
             </div>
             <form class="navbar-form navbar-left navbar-search" role="search">
@@ -128,47 +126,6 @@
         </div>
     </div>
 </div>
-
-<!-- Login Modal-->
-<div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="Login" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-                <h2 class="modal-title">Login</h2>
-            </div>
-
-            <div class="modal-body">
-                <!-- The form is placed inside the body of modal -->
-                <form id="loginForm" method="post" class="form-horizontal">
-                    <div class="form-group">
-                        <label class="col-xs-3 control-label myLoginModalText">Username</label>
-                        <div class="col-xs-5">
-                            <input type="text" class="form-control myLoginModalInput" name="username" />
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <label class="col-xs-3 control-label myLoginModalText">Password</label>
-                        <div class="col-xs-5">
-                            <input type="password" class="form-control myLoginModalInput" name="password" />
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <div class="col-xs-5 col-xs-offset-3 login-sign-footer" style="float: right;">
-                            <button type="submit" class="btn btn-srk">Login</button>
-                            <button type="button" class="btn btn-srk-cancel" data-dismiss="modal" >Cancel</button>
-                        </div>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
-</div>
-
 <!-- SignUp Modal-->
 <div class="modal fade" id="signUpModal" tabindex="-1" role="dialog" aria-labelledby="SignUp" aria-hidden="true">
     <div class="modal-dialog">
@@ -177,36 +134,21 @@
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
-                <h2 class="modal-title">Sign Up</h2>
+                <h2 class="modal-title">Register for Events</h2>
             </div>
 
             <div class="modal-body">
                 <!-- The form is placed inside the body of modal -->
                 <form id="signUpForm" method="post" class="form-horizontal">
                     <div class="form-group">
-                        <label class="col-xs-3 control-label myLoginModalText">Username</label>
+                        <label class="col-xs-3 control-label myLoginModalText">Email ID :</label>
                         <div class="col-xs-5">
                             <input type="text" class="form-control myLoginModalInput" name="username" />
                         </div>
                     </div>
-
-                    <div class="form-group">
-                        <label class="col-xs-3 control-label myLoginModalText">Password</label>
-                        <div class="col-xs-5">
-                            <input type="password" class="form-control myLoginModalInput" name="password" />
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <label class="col-xs-3 control-label myLoginModalText">Confirm Password</label>
-                        <div class="col-xs-5">
-                            <input type="password" class="form-control myLoginModalInput" name="confirm_password" />
-                        </div>
-                    </div>
-
                     <div class="form-group">
                         <div class="col-xs-5 col-xs-offset-3 login-sign-footer" style="float: right;">
-                            <button type="submit" class="btn btn-srk">Sign Up</button>
+                            <button type="submit" class="btn btn-srk">Register</button>
                             <button type="button" class="btn btn-srk-cancel" data-dismiss="modal" >Cancel</button>
                         </div>
                     </div>
@@ -399,13 +341,13 @@
                             </a>
                         </li>
                         <li>
-                            <a href="">
+                            <a data-toggle="modal" data-target="#signUpModal">
                                 <span class="icon-email"></span>
                             </a>
                         </li>
                     </ul>
                     <div class="mask">
-                        <h2>Upcoming Event</h2>
+                        <h2>Recent Event</h2>
 
                         <p>Date: 5th May - 15th May<br/>
                             Timing: 7AM - 8AM (slot 1)<br/>
@@ -430,7 +372,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="">
+                            <a data-toggle="modal" data-target="#signUpModal">
                                 <span class="icon-email"></span>
                             </a>
                         </li>
@@ -462,7 +404,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="">
+                            <a data-toggle="modal" data-target="#signUpModal">
                                 <span class="icon-email"></span>
                             </a>
                         </li>
